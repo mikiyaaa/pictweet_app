@@ -29,7 +29,7 @@ class TweetsController < ApplicationController
 
   def show
     @comment = Comment.new
-    @comments = @tweet.comments.include(:user)
+    @comments = @tweet.comments.includes(:user)
   end
 
   private
